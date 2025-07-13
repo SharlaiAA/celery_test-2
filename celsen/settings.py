@@ -115,12 +115,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #Настройка почты
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_SSL = True
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_HOST_USER = 'SharlaiAA@yandex.ru'
-EMAIL_HOST_PASSWORD = 'bwmgibuavzrsmevk'
-EMAIL_PORT = 465
+
 
 
 #Не нужно
