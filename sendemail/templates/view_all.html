@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{%block title%}
+View all
+{% endblock %}
+{% block name %}
+Что у меня в бд?
+{% endblock name %}
+{% block content %}
+Темы:
+<br>
+{%for topic in topics%}
+{{topic.id}} : {{topic}}
+<br>
+{%endfor%}
+<br>
+Почты:
+<br>
+{%for mail in mails%}
+{{mail.id}} : {{mail}}
+<br>
+{%endfor%}
+<br>
+<br>
+<center>Что отправить?</center>
+<form method='POST'>
+    {% csrf_token %}
+    <label for='chosen_id'>Впишите нужный id</label>
+    <input type=text id='chosen_id' name='chosen_id' required>
+    <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
+
+{% endblock content %}
